@@ -55,13 +55,15 @@ window.onload = function() {
         $('.info-2').addClass('d-none')
         const cycleID = cycleSFX.play()
 
+        // Get target index.
+        const targetIndex = Math.floor(Math.random() * buildings.length)
+
         // Randomization loop.
         let stop = false
-        let index = null
         function loop() {
 
             // Get next index.
-            index = Math.floor(Math.random() * buildings.length)
+            const index = stop ? targetIndex : Math.floor(Math.random() * buildings.length)
 
             // Update building code.
             $('#code').text(buildings[index][0])
