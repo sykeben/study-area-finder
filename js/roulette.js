@@ -64,25 +64,22 @@ window.onload = function() {
 
             // Get next index.
             const index = stop ? targetIndex : Math.floor(Math.random() * buildings.length)
+            const building = buildings[index]
 
             // Update building code.
-            $('#code').text(buildings[index][0])
+            $('#code').text(building.code)
 
             // Next iteration or stop.
             if (stop) {
 
                 // Update building information.
-                $('#name').text(buildings[index][1])
+                $('#name').text(building.name)
                 $('#tips').empty()
-                if (buildings[index][2]) {
-                    buildings[index][2].split('; ').forEach(function(tip, index, array) {
-                        $('#tips').append($('<span>', {text: tip + '.', class: 'fs-2'}))
-                        if (index < array.length - 1) $('#tips').append($('<br>'))
-                        if (index < array.length - 1) $('#tips').append($('<br>', {class: 'd-none d-md-inline'}))
-                    })
-                } else {
-                    $('#tips').append($('<span>', {text: 'No tips for this building.', class: 'fs-3'}))
-                }
+                building.tips.forEach(function(tip, index, array) {
+                    $('#tips').append($('<span>', {text: tip + '.', class: 'fs-2'}))
+                    if (index < array.length - 1) $('#tips').append($('<br>'))
+                    if (index < array.length - 1) $('#tips').append($('<br>', {class: 'd-none d-md-inline'}))
+                })
 
                 // Update interface state.
                 $('#school').prop('disabled', false)
