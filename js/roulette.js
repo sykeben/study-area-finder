@@ -2,6 +2,7 @@
 const delay = 50
 const schools = Object.keys(data)
 var buildings = null
+var hat = null
 const cycleSFX = new Howl({ src: ['wav/cycle.wav'], loop: true })
 const selectSFX = new Howl({ src: ['wav/select.wav'] })
 
@@ -35,9 +36,11 @@ window.onload = function() {
         // Update interface state.
         if (index >= 0) {
             buildings = data[schools[index]]
+            hat = buildings.slice()
             $('#go').prop('disabled', false)
         } else {
             buildings = null
+            hat = null
             $('#go').prop('disabled', true)
         }
         $('.info-1').addClass('d-none')
@@ -55,16 +58,20 @@ window.onload = function() {
         $('.info-2').addClass('d-none')
         const cycleID = cycleSFX.play()
 
+        // Refresh hat if empty.
+        if (hat.length <= 0) {
+            hat = buildings.slice()
+        }
+
         // Get target index.
-        const targetIndex = Math.floor(Math.random() * buildings.length)
+        const targetIndex = Math.floor(Math.random() * hat.length)
 
         // Randomization loop.
         let stop = false
         function loop() {
 
-            // Get next index.
-            const index = stop ? targetIndex : Math.floor(Math.random() * buildings.length)
-            const building = buildings[index]
+            // Get next building (hat selection if stopping).
+            const building = stop ? hat[targetIndex] : buildings[Math.floor(Math.random() * buildings.length)]
 
             // Update building code.
             $('#code').text(building.code)
@@ -86,6 +93,9 @@ window.onload = function() {
                     if (index < array.length - 1) $('#tips').append($('<br>', {class: 'd-none d-md-inline'}))
                 })
 
+                // Remove selection from hat.
+                hat.splice(targetIndex, 1)
+
                 // Update interface state.
                 $('#school').prop('disabled', false)
                 $('#go').prop('disabled', false)
@@ -94,7 +104,10 @@ window.onload = function() {
                 selectSFX.play()
 
             } else {
+                
+                // Go again.
                 setTimeout(loop, delay)
+
             }
         }
         loop()
@@ -102,7 +115,7 @@ window.onload = function() {
         // Stopping point.
         setTimeout(function() {
             stop = true
-        }, delay * 60)
+        }, delay )
 
     })
 
