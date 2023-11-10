@@ -1,0 +1,25 @@
+#map {
+    position: relative;
+}
+
+#map-box, #map-rail-h, #map-rail-v {
+    position: absolute;
+}
+
+#map-box {
+    background-color: #FF080814;
+}
+
+#map-rail-h {
+    left: 0;
+    width: 100%;
+}
+
+#map-rail-v {
+    top: 0;
+    height: 100%;
+}
+
+#map-rail-h, #map-rail-v {
+    background-color: #0000FF08;
+}

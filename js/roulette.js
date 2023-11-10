@@ -3,6 +3,7 @@ const delay = 50
 const schools = Object.keys(data)
 var buildings = null
 var hat = null
+var map = null
 const cycleSFX = new Howl({ src: ['wav/cycle.wav'], loop: true })
 const selectSFX = new Howl({ src: ['wav/select.wav'] })
 
@@ -35,14 +36,36 @@ window.onload = function() {
 
         // Update interface state.
         if (index >= 0) {
-            buildings = data[schools[index]]
+
+            // Get school.
+            const school = data[schools[index]]
+
+            // Update data.
+            buildings = school.buildings
             hat = buildings.slice()
+            map = school.map
+
+            // Update interface.
             $('#go').prop('disabled', false)
+            $('#map-img').prop('src', `map/${map.file}`)
+            $('#map-box').css('height', `${100 / map.size.rows}%`)
+            $('#map-rail-h').css('height', `${100 / map.size.rows}%`)
+            $('#map-box').css('width', `${100 / map.size.cols}%`)
+            $('#map-rail-v').css('width', `${100 / map.size.cols}%`)
+
         } else {
+
+            // Reset data.
             buildings = null
             hat = null
+            map = null
+
+            // Reset interface.
             $('#go').prop('disabled', true)
+
         }
+
+        // Reset interface.
         $('.info-1').addClass('d-none')
         $('.info-2').addClass('d-none')
 
@@ -89,9 +112,26 @@ window.onload = function() {
                 $('#tips').empty()
                 building.tips.forEach(function(tip, index, array) {
                     $('#tips').append($('<span>', {text: tip + '.', class: 'fs-2'}))
-                    if (index < array.length - 1) $('#tips').append($('<br>'))
-                    if (index < array.length - 1) $('#tips').append($('<br>', {class: 'd-none d-md-inline'}))
+                    if (index < array.length - 1) {
+                        $('#tips').append($('<br>'))
+                        $('#tips').append($('<br>', {class: 'd-none d-md-inline'}))
+                    }
                 })
+
+                // Update map box.
+                if (building.cell) {
+                    $('#map-box').removeClass('d-none')
+                    $('#map-rail-v').removeClass('d-none')
+                    $('#map-rail-h').removeClass('d-none')
+                    $('#map-box').css('top', `${((building.cell.row - 1) * 100) / map.size.rows}%`)
+                    $('#map-rail-h').css('top', `${((building.cell.row - 1) * 100) / map.size.rows}%`)
+                    $('#map-box').css('left', `${((building.cell.col - 1) * 100) / map.size.cols}%`)
+                    $('#map-rail-v').css('left', `${((building.cell.col - 1) * 100) / map.size.cols}%`)
+                } else {
+                    $('#map-box').addClass('d-none')
+                    $('#map-rail-v').addClass('d-none')
+                    $('#map-rail-h').addClass('d-none')
+                }
 
                 // Remove selection from hat.
                 hat.splice(targetIndex, 1)
