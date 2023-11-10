@@ -115,7 +115,7 @@ window.onload = function() {
         // Stopping point.
         setTimeout(function() {
             stop = true
-        }, delay )
+        }, delay * 30)
 
     })
 
