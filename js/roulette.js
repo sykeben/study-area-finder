@@ -72,8 +72,13 @@ window.onload = function() {
             // Next iteration or stop.
             if (stop) {
 
-                // Update building information.
+                // Update building name.
                 $('#name').text(building.name)
+
+                // Update building link.
+                $('#link').prop('href', building.link)
+
+                // Update building tips.
                 $('#tips').empty()
                 building.tips.forEach(function(tip, index, array) {
                     $('#tips').append($('<span>', {text: tip + '.', class: 'fs-2'}))
