@@ -55,7 +55,8 @@ const data = {
                 name: 'Neil Armstrong Hall of Engineering',
                 tips: [
                     'Lobby on 1st & Ground Floors',
-                    'Nooks at Ends'
+                    'Nooks at Ends',
+                    'Study Spaces in Halls'
                 ],
                 link: 'https://maps.apple.com/place?q=Neil%20Armstrong%20Hall%20of%20Engineering&auid=15792873004716321052&address=701%20W%20Stadium%20Ave,%20West%20Lafayette,%20IN%2047907,%20United%20States&ll=40.431007637986156,-86.91485345363617',
                 cell: { row: 4.825, col: 6.825 }
@@ -101,7 +102,8 @@ const data = {
                 code: 'PHYS',
                 name: 'Physics Building',
                 tips: [
-                    'Student Commons on 1st Floor'
+                    'Student Commons on 1st Floor',
+                    'Skybridge & Tunnel to MSEE'
                 ],
                 link: 'https://maps.apple.com/place?q=Purdue%20University%20-%20Department%20of%20Physics%20and%20Astronomy&auid=10857719627909359804&address=525%20Northwestern%20Ave,%20West%20Lafayette,%20IN%20%2047907,%20United%20States&ll=40.43011283884391,-86.91354033355309',
                 cell: { row: 5.125, col: 7.25 }
@@ -110,7 +112,8 @@ const data = {
                 code: 'WANG',
                 name: 'Seng-Liang Wang Hall',
                 tips: [
-                    '5th Floor is all Study/Work Areas'
+                    '5th Floor is all Study/Work Areas',
+                    'Lobby Available'
                 ],
                 link: 'https://maps.apple.com/place?q=Seng%20Liang%20Wang%20Hall&auid=8029647363426688817&address=516%20Northwestern%20Ave,%20West%20Lafayette,%20IN%20%2047907,%20United%20States&ll=40.430170822830505,-86.91246280061021',
                 cell: { row: 5, col: 7.625 }
@@ -120,7 +123,9 @@ const data = {
                 name: 'Materials and Electrical Engineering',
                 tips: [
                     'Lobby on 1st Floor',
-                    'Tables on 2nd Floor'
+                    'Tables on 2nd Floor',
+                    'Skybridge to BHEE & PHYS',
+                    'Tunnel to PHYS & Parking'
                 ],
                 link: 'https://maps.apple.com/place?q=Purdue%20University&auid=1984151223246801971&address=501%20Northwestern%20Ave,%20West%20Lafayette,%20IN%20%2047907,%20United%20States&ll=40.42932741724,-86.9126458353805',
                 cell: { row: 5.5, col: 7.5 }
@@ -129,7 +134,8 @@ const data = {
                 code: 'BHEE',
                 name: 'Max W. & Maileen Brown Family Hall',
                 tips: [
-                    'Open Areas at Elevators'
+                    'Open Areas at Elevators',
+                    'Skybridge to MSEE'
                 ],
                 link: 'https://maps.apple.com/place?q=Max%20W%20&%20Maileen%20Brown%20Family%20Hall%20(BHEE)&auid=3411214609294710331&address=465%20Northwestern%20Ave,%20West%20Lafayette,%20IN%2047907,%20United%20States&ll=40.4287316,-86.9119392',
                 cell: { row: 5.75, col: 7.75 }
@@ -157,6 +163,8 @@ const data = {
                 code: 'WALC',
                 name: 'Thomas S. & Harvey D. Wilmeth Active Learning Center',
                 tips: [
+                    'Open Areas on All Floors',
+                    'Computer Labs on 2nd Floor',
                     'Study Rooms on 3rd Floor'
                 ],
                 link: 'https://maps.apple.com/place?q=Wilmeth%20Active%20Learning%20Center&auid=10482427986563468581&address=340%20Centennial%20Mall%20Dr,%20West%20Lafayette,%20IN%20%2047907,%20United%20States&ll=40.4272963334535,-86.9133941653966',
@@ -164,20 +172,22 @@ const data = {
             },
             {
                 code: 'LMBS',
-                name: 'Lambertus Hall (FKA: Gateway, Same as DUDL)',
+                name: 'Lambertus Hall (FKA: Gateway 1)',
                 tips: [
                     'Open Spaces on Most Floors',
-                    'Nooks at Ends'
+                    'Nooks at Ends',
+                    'Connected to DUDL'
                 ],
                 link: 'https://maps.apple.com/place?q=Dudley%20Hall%20And%20Lambertus%20Hall&auid=14362079107496656608&address=401%20N%20Grant%20St,%20West%20Lafayette,%20IN%20%2047907,%20United%20States&ll=40.42755305407332,-86.91110372543335',
                 cell: { row: 6.25, col: 7.875 }
             },
             {
                 code: 'DUDL',
-                name: 'Dudley Hall (FKA: Gateway, Same as LMBS)',
+                name: 'Dudley Hall (FKA: Gateway 2)',
                 tips: [
                     'Open Spaces on Most Floors',
-                    'Nooks at Ends'
+                    'Nooks at Ends',
+                    'Connected to LMBS'
                 ],
                 link: 'https://maps.apple.com/place?q=Dudley%20Hall%20And%20Lambertus%20Hall&auid=14362079107496656608&address=401%20N%20Grant%20St,%20West%20Lafayette,%20IN%20%2047907,%20United%20States&ll=40.42755305407332,-86.91110372543335',
                 cell: { row: 6.375, col: 8 }
@@ -186,6 +196,7 @@ const data = {
                 code: 'KNOY',
                 name: 'Marice G. Knoy Hall of Technology',
                 tips: [
+                    'Lobby Area on 1st Floor',
                     'Study Spaces on 3rd & 4th Floors'
                 ],
                 link: 'https://maps.apple.com/place?address=401%20N%20Grant%20St,%20West%20Lafayette,%20IN%20%2047907,%20United%20States&auid=16597599311210736881&ll=40.427757,-86.911171&lsp=9902&q=Knoy%20Hall%20of%20Technology&t=m',
@@ -193,19 +204,21 @@ const data = {
             },
             {
                 code: 'WTHR',
-                name: 'Richart B. Wetherill Lab. of Chemistry (Linked to BRWN)',
+                name: 'Richart B. Wetherill Lab. of Chemistry',
                 tips: [
                     'Lobby on 2nd Floor',
-                    'Study Nook on 1st Floor'
+                    'Study Nook on 1st Floor',
+                    'Connected to BRWN'
                 ],
                 link: 'https://maps.apple.com/place?q=Richard%20Benbridge%20Wetherill%20Laboratory%20of%20Chemistry&auid=1589083147625434279&address=560%20Oval%20Dr,%20West%20Lafayette,%20IN%20%2047907,%20United%20States&ll=40.4264928,-86.9131112',
                 cell: { row: 6.625, col: 7.375 }
             },
             {
                 code: 'BRWN',
-                name: 'Herbert C. Brown Lab. of Chemistry (Linked to WTHR)',
+                name: 'Herbert C. Brown Lab. of Chemistry',
                 tips: [
-                    'Classrooms on 2nd & 3rd Floors (After Hours)'
+                    'Classrooms on 2nd & 3rd Floors (After Hours)',
+                    'Connected to WTHR'
                 ],
                 link: 'https://maps.apple.com/place?q=Herbert%20C.%20Brown%20Laboratory%20of%20Chemistry&auid=5136866216924238482&address=560%20Oval%20Dr,%20West%20Lafayette,%20IN%20%2047907,%20United%20States&ll=40.426498585304934,-86.91182513263982',
                 cell: { row: 6.625, col: 7.75 }
@@ -223,7 +236,7 @@ const data = {
                 code: 'GRIS',
                 name: 'Grissom Hall',
                 tips: [
-                    'No Tips Available'
+                    'Large Lobby on 1st Floor'
                 ],
                 link: 'https://maps.apple.com/place?q=Grissom%20Hall&auid=6533593418293718694&address=315%20N%20Grant%20St,%20West%20Lafayette,%20IN%20%2047907,%20United%20States&ll=40.4264093469563,-86.9107871702524',
                 cell: { row: 6.75, col: 8.125 }
@@ -233,7 +246,8 @@ const data = {
                 name: 'Stewart Center',
                 tips: [
                     'HSSE Library',
-                    'Study Spaces on Ground & Lower'
+                    'Study Spaces on Ground & Lower',
+                    'Tunnel to HIKS & PMU'
                 ],
                 link: 'https://maps.apple.com/place?q=Stewart%20Center&auid=17813050697143091795&address=128%20Memorial%20Mall,%20West%20Lafayette,%20IN%20%2047907,%20United%20States&ll=40.4250165826896,-86.9129446782149',
                 cell: { row: 7.25, col: 7.5 }
@@ -244,7 +258,8 @@ const data = {
                 tips: [
                     'Study Rooms',
                     'Computer Labs',
-                    'Open Spaces'
+                    'Open Spaces',
+                    'Tunnel to STEW'
                 ],
                 link: 'https://maps.apple.com/place?q=Hicks%20Undergraduate%20Library&ll=40.4245258161303%2C-86.9126316672825&auid=15639192529196823633&lsp=9902&address=504%20W%20State%20St%2C%20West%20Lafayette%2C%20IN%20%2047907%2C%20United%20States',
                 cell: { row: 7.625, col: 7.625 }
@@ -253,7 +268,8 @@ const data = {
                 code: 'PMU',
                 name: 'Purdue Memorial Union',
                 tips: [
-                    'Tables Ground, 1st, & Second Floors'
+                    'Tables Ground, 1st, & Second Floors',
+                    'Tunnels to STEW, Parking, KRAN, RAWL, & YONG'
                 ],
                 link: 'https://maps.apple.com/place?q=Purdue%20Memorial%20Union&auid=11505910234298704831&address=101%20N%20Grant%20St,%20West%20Lafayette,%20IN%2047906,%20United%20States&ll=40.425057966443674,-86.91074430942535',
                 cell: { row: 7.25, col: 8 }
@@ -263,7 +279,8 @@ const data = {
                 name: 'Jerry S. Rawls Hall',
                 tips: [
                     'Nooks all Floors',
-                    'Open Area on 2nd Floor'
+                    'Open Area on 2nd Floor',
+                    'Tunnels to STEW, Parking, KRAN, PMU, & YONG'
                 ],
                 link: 'https://maps.apple.com/place?q=Rawls%20Hall&ll=40.4237649767543%2C-86.9099260859327&auid=12011523158894312844&lsp=9902&address=100%20S%20Grant%20St%2C%20West%20Lafayette%2C%20IN%20%2047907%2C%20United%20States',
                 cell: { row: 7.75, col: 8.375 }
@@ -272,7 +289,8 @@ const data = {
                 code: 'KRAN',
                 name: 'Krannert Building',
                 tips: [
-                    'Lobbies on 1st and Some Other Floors'
+                    'Lobbies on 1st and Some Other Floors',
+                    'Tunnels to STEW, Parking, PMU, RAWL, & YONG'
                 ],
                 link: 'https://maps.apple.com/place?q=Krannert%20Graduate%20School%20of%20Management&ll=40.42355591785487%2C-86.91089987754822&auid=15716963774865216654&lsp=9902&address=403%20W%20State%20St%2C%20West%20Lafayette%2C%20IN%2047907%2C%20United%20States',
                 cell: { row: 7.875, col: 8.125 }
@@ -281,7 +299,8 @@ const data = {
                 code: 'YONG',
                 name: 'Ernest C. Young Hall',
                 tips: [
-                    'Lobbies on 1st and Some Other Floors'
+                    'Lobbies on 1st and Some Other Floors',
+                    'Tunnels to STEW, Parking, KRAN, RAWL, & PMU'
                 ],
                 link: 'https://maps.apple.com/place?q=Ernest%20C.%20Young%20Hall&auid=11751667482706022835&address=155%20S%20Grant%20St,%20West%20Lafayette,%20IN%2047907,%20United%20States&ll=40.42290582797254,-86.91068530082703',
                 cell: { row: 8.125, col: 8.25 }
@@ -327,14 +346,15 @@ const data = {
                 code: 'SC',
                 name: 'Stanley Coulter Hall',
                 tips: [
-                    'Space on Ground Floor'
+                    'Space on Ground Floor',
+                    'Courtyard Available'
                 ],
                 link: 'https://maps.apple.com/place?q=Stanley%20Coulter%20Hall&auid=7283105943521455532&address=640%20Oval%20Dr,%20West%20Lafayette,%20IN%20%2047907,%20United%20States&ll=40.426376985020326,-86.91432237625122',
                 cell: { row: 6.625, col: 7 }
             },
             {
                 code: 'SCHM',
-                name: 'Helen B. Schleman Hall (FKA: Recitation Hall)',
+                name: 'Helen B. Schleman Hall (FKA: REC)',
                 tips: [
                     'Most Classrooms Open (After Hours)'
                 ],
@@ -532,7 +552,8 @@ const data = {
                 code: 'FLEX',
                 name: 'Flex Laboratories',
                 tips: [
-                    'Spaces on All Floors (May be Locked)'
+                    'Spaces on All Floors (May be Locked)',
+                    'Be Mindful of Researchers'
                 ],
                 link: 'https://maps.apple.com/place?q=Flex%20Lab&auid=8214421334325820791&address=205%20Gates%20Rd,%20West%20Lafayette,%20IN%20%2047907,%20United%20States&ll=40.4218698,-86.9236075',
                 cell: { row: 8.75, col: 4.125 }
@@ -588,7 +609,8 @@ const data = {
                 code: 'SHRV',
                 name: 'Eleanor B. Shreve Residence Hall (URSC)',
                 tips: [
-                    'UR Support Center on 1st Floor'
+                    'UR Support Center on 1st Floor',
+                    'Front Porch Available'
                 ],
                 link: 'https://maps.apple.com/place?q=Shreve%20Hall&auid=12878733075134706175&address=1275%20Third%20St,%20West%20Lafayette,%20IN%2047906,%20United%20States&ll=40.4268601596085,-86.9249242585945',
                 cell: { row: 6.5, col: 3.75 }
