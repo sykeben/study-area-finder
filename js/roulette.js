@@ -47,7 +47,7 @@ window.onload = function() {
 
             // Update interface.
             $('#go').prop('disabled', false)
-            $('#map-img').prop('src', `map/${map.file}`)
+            $('#map-img').prop('src', `data/${map.file}`)
             $('#map-box').css('height', `${100 / map.size.rows}%`)
             $('#map-rail-h').css('height', `${100 / map.size.rows}%`)
             $('#map-box').css('width', `${100 / map.size.cols}%`)
